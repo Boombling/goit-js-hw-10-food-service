@@ -7,7 +7,7 @@
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "production": "parcel src/index.html --public-url /goit-js-hw-10-food-service/",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "repository": {
