@@ -18,8 +18,8 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
+bodyRef.classList.add(Theme.LIGHT);  
 switchTheme.addEventListener('change', switcher);
-// bodyRef.classList.add(Theme.LIGHT);  
 function switcher(evt) {
     const check = switchTheme.checked;
     if (check) {
