@@ -23,10 +23,10 @@ switchTheme.addEventListener('change', switcher);
 function switcher(evt) {
     const check = switchTheme.checked;
     if (check) {
-        changeDarkTheme()
+        changeTheme(Theme.DARK, Theme.LIGHT)
     }
     else {
-        changeLightTheme()
+        changeTheme(Theme.LIGHT, Theme.DARK)
     }
     localStorageChange()
 }
@@ -48,12 +48,12 @@ if (theme === Theme.DARK) {
     switchTheme.checked = true;
 }
 
-function changeDarkTheme() {
-    bodyRef.classList.add(Theme.DARK);
-    bodyRef.classList.remove(Theme.LIGHT);
+function changeTheme(x, y) {
+    bodyRef.classList.add(x);
+    bodyRef.classList.remove(y);
     
 }
-function changeLightTheme() {
-    bodyRef.classList.add(Theme.LIGHT);
-    bodyRef.classList.remove(Theme.DARK);
-}
+// function changeLightTheme() {
+//     bodyRef.classList.add(Theme.LIGHT);
+//     bodyRef.classList.remove(Theme.DARK);
+// }
